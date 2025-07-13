@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #ffffff; /* Default light background */
+  color: #213547; /* Default dark text */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+a:hover {
+  color: hsl(var(--primary-foreground)); /* Adjust hover color for better contrast */
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Montserrat Bold */
+  line-height: 1.2;
+}
+
+/* Custom Bladon Mimarlık Color Palette */
+@layer base {
+  :root {
+    --cream-white: 0 0% 97%; /* #F7F7F7 - slightly adjusted for better contrast with dark text */
+    --soft-gray: 220 14% 94%; /* #E0E0E0 */
+    --charcoal-gray: 210 10% 26%; /* #36454F */
+    --anthracite: 210 10% 20%; /* #2F4F4F */
+    --natural-wood-light: 30 40% 70%; /* #D2B48C */
+    --light-bronze: 29 50% 64%; /* #B87333 */
+
+    /* Shadcn/UI Mapped Colors - Light Theme */
+    --background: var(--cream-white);
+    --foreground: var(--charcoal-gray);
+    --card: var(--cream-white);
+    --card-foreground: var(--charcoal-gray);
+    --popover: var(--cream-white);
+    --popover-foreground: var(--charcoal-gray);
+    --primary: var(--light-bronze);
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: var(--soft-gray);
+    --secondary-foreground: var(--charcoal-gray);
+    --muted: var(--soft-gray);
+    --muted-foreground: 210 10% 40%;
+    --accent: var(--light-bronze);
+    --accent-foreground: 0 0% 100%; /* White */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 10% 80%;
+    --input: 210 10% 80%;
+    --ring: var(--light-bronze);
+    --radius: 0.75rem; /* Slightly more rounded for a softer, modern feel */
+  }
+
+  .dark {
+    /* Shadcn/UI Mapped Colors - Dark Theme */
+    --background: var(--anthracite);
+    --foreground: var(--soft-gray);
+    --card: var(--anthracite);
+    --card-foreground: var(--soft-gray);
+    --popover: var(--anthracite);
+    --popover-foreground: var(--soft-gray);
+    --primary: var(--light-bronze);
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 210 10% 30%; /* Slightly lighter anthracite */
+    --secondary-foreground: var(--soft-gray);
+    --muted: 210 10% 30%;
+    --muted-foreground: 210 10% 60%;
+    --accent: var(--light-bronze);
+    --accent-foreground: 0 0% 100%; /* White */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 10% 35%;
+    --input: 210 10% 35%;
+    --ring: var(--light-bronze);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
